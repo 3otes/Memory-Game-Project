@@ -4,20 +4,31 @@ let cards = document.querySelectorAll('li.card');
 let allCards = [...cards];
 //Variable to hold open cards.
 let openCards = [];
-
+//to count card matches.
+let counter = 0;
+//shuffle allCards array.
 shuffle(allCards);
+//clear the deck.
 document.getElementsByClassName('deck')[0].innerHTML = '';
+//add shuffled cards to deck.
 for (i of allCards) {
   document.getElementById('deck').appendChild(i);
 };
-
-
+//when two cards are selected see if they match
 const checkMatch = function(){
+//if matched...
   if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className){
+//add new class to card.
     openCards[0].classList.add('match');
     openCards[1].classList.add('match');
+//clear openCards.
     openCards = [];
-    console.log('matches');
+//counter for matches.
+    counter += 1;
+    if (counter === 8){
+      document.getElementById('woohoo').classList.remove('hidden');
+      document.getElementById('woohoo').classList.add('you-win');
+    }
     // 1. change class to match
   } else {
     setTimeout(function delayFlip() {
