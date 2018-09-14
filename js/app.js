@@ -1,7 +1,8 @@
-//list that holds all the cards
+//Nodelist that holds all the cards
 let cards = document.querySelectorAll('li.card');
+//array containing all cards
 let allCards = [...cards];
-
+//Variable to hold open cards.
 let openCards = [];
 
 shuffle(allCards);
@@ -10,8 +11,6 @@ for (i of allCards) {
   document.getElementById('deck').appendChild(i);
 };
 
-//let cardChild = document.querySelectorAll('li.card.i');
-//let allChild = [...cardChild];
 
 const checkMatch = function(){
   if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className){
@@ -66,13 +65,6 @@ for (i of allCards) {
 
 
 
-
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
