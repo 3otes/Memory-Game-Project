@@ -112,18 +112,45 @@ h1 {
   display: none;
 }
 
+
+
 .you-win {
   width: 660px;
-  min-height: 680px;
-  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  min-height: 720px;
+  background: #2e3d49;
   padding: 32px;
   border-radius: 10px;
-  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 0 3em;
+  margin: 1em 0em 2em;
   position: absolute;
   z-index: 9999;
+}
+
+/*
+ * Styles for the you won reset button.
+ */
+.green, .w3-hover-green:hover {
+    color: #fff!important;
+    background-color: #4CAF50!important;
+}
+
+.block {
+    display: block;
+    width: 100%;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
 }

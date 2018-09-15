@@ -1,69 +1,77 @@
 //Nodelist that holds all the cards
 let cards = document.querySelectorAll('li.card');
+
 //array containing all cards
 let allCards = [...cards];
+
 //Variable to hold open cards.
 let openCards = [];
+
 //to count card matches.
 let counter = 0;
+
+//count all moves
+let moveCounter = 0;
+
+//increments of time.
+let seconds = 0;
+
+//gameTimer function
+function gameTimer() {
+  document.getElementById('timer').textContent = seconds;
+  seconds += 1;
+  setTimeout(gameTimer, 1000);
+};
+
+//game time
+gameTimer();
+
 //shuffle allCards array.
 shuffle(allCards);
+
 //clear the deck.
 document.getElementsByClassName('deck')[0].innerHTML = '';
+
 //add shuffled cards to deck.
 for (i of allCards) {
-  document.getElementById('deck').appendChild(i);
+  document.getElementsByClassName('deck')[0].appendChild(i);
 };
-//when two cards are selected see if they match
+
+//when two cards are selected see if they match and count as one move.
 const checkMatch = function(){
-//if matched...
+  moveCounter += 1;
+  document.getElementsByClassName('moves')[0].textContent = moveCounter;
+  //if matched...
   if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className){
-//add new class to card.
+    //add new class to card to show that they are a match.
     openCards[0].classList.add('match');
     openCards[1].classList.add('match');
-//clear openCards.
+    //clear openCards counter to allow next move.
     openCards = [];
-//counter for matches.
+    //counter to know that the game is over when all 8 matches are made, and display the pop up modal.
     counter += 1;
     if (counter === 8){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
     }
-    // 1. change class to match
+  // the cards do not match
   } else {
     setTimeout(function delayFlip() {
       openCards[0].classList.remove('open', 'show');
       openCards[1].classList.remove('open', 'show');
       openCards = [];
     }, 1000);
-
-  };
-
-};
-
-let noMatch = function(e) {
-  if (document.querySelectorAll('li.card.open.show')){
-
-    console.log("foo");
   };
 };
 
 //function to flip the cards in the for of loop.
 flipCard = function(e){
   openCards.push(e.target);
-
   if (openCards.length === 1){
     e.target.classList.add('open', 'show');
   } else if (openCards.length == 2) {
     e.target.classList.add('open', 'show');
     checkMatch();
-
-    // 1.check if cards matched. ad matched calss
-    // 2. if cards not match hide.
-    // 3. open cards empty.
-    // 4. if cards mat
-    // 5. if cards matched stay.
-
   } else {
     noMatch();
   };
@@ -73,8 +81,6 @@ flipCard = function(e){
 for (i of allCards) {
   i.addEventListener("click", flipCard,);
 };
-
-
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976
@@ -91,15 +97,3 @@ function shuffle(array) {
 
     return array;
 }
-
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- *///list that holds all the cards
