@@ -14,22 +14,22 @@ let counter = 0;
 let moveCounter = 0;
 
 //increments of time.
-let seconds = 0
+let seconds = 0;
 
-let minutes = 0
+let minutes = 0;
 
-let hours = 0
+let hours = 0;
 
 
 //gameTimer function
 function gameTimer() {
-  document.getElementById('timer').textContent = hours + ':' minutes + '.' + seconds;
+  document.getElementById('timer').textContent = hours + ':' + minutes + '.' + seconds;
   seconds += 1;
-  if (seconds == 60) {
+  if (seconds === 60) {
       minutes++;
       seconds = 0;
   };
-  if (minutes == 60) {
+  if (minutes === 60) {
       hour++;
       minutes = 0;
   };
@@ -73,8 +73,8 @@ const checkMatch = function(){
     if (counter === 8){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
-      document.getElementById('time').textContent = seconds;
-      document.getElementById('stars').textContent = document.getElementsByClassName('stars')[0].children.length;
+      document.getElementById('time').textContent = "Your Time: " + hours + ':' + minutes + '.' + seconds;
+      document.getElementById('stars').textContent = "Your Rating: " + document.getElementsByClassName('stars')[0].children.length;
     }
   // the cards do not match
   } else {

@@ -33,6 +33,23 @@ h1 {
     font-weight: 300;
 }
 
+*time {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1em 0em 2em;
+  position: absolute;
+}
+
+*stars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1em 0em 2em;
+  position: absolute;
+}
+
+
 /*
  * Styles for the deck of cards
  */
