@@ -14,12 +14,25 @@ let counter = 0;
 let moveCounter = 0;
 
 //increments of time.
-let seconds = 0;
+let seconds = 0
+
+let minutes = 0
+
+let hours = 0
+
 
 //gameTimer function
 function gameTimer() {
-  document.getElementById('timer').textContent = seconds;
+  document.getElementById('timer').textContent = hours + ':' minutes + '.' + seconds;
   seconds += 1;
+  if (seconds == 60) {
+      minutes++;
+      seconds = 0;
+  };
+  if (minutes == 60) {
+      hour++;
+      minutes = 0;
+  };
   setTimeout(gameTimer, 1000);
 };
 
@@ -41,6 +54,13 @@ for (i of allCards) {
 const checkMatch = function(){
   moveCounter += 1;
   document.getElementsByClassName('moves')[0].textContent = moveCounter;
+  if (moveCounter === 13){
+    document.getElementsByClassName('stars')[0].children[0].remove();
+  } else if (moveCounter === 16) {
+    document.getElementsByClassName('stars')[0].children[0].remove();
+  } else if (moveCounter === 20) {
+    document.getElementsByClassName('stars')[0].children[0].remove();
+  };
   //if matched...
   if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className){
     //add new class to card to show that they are a match.
@@ -53,6 +73,8 @@ const checkMatch = function(){
     if (counter === 8){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
+      document.getElementById('time').textContent = seconds;
+      document.getElementById('stars').textContent = document.getElementsByClassName('stars')[0].children.length;
     }
   // the cards do not match
   } else {
@@ -72,8 +94,6 @@ flipCard = function(e){
   } else if (openCards.length == 2) {
     e.target.classList.add('open', 'show');
     checkMatch();
-  } else {
-    noMatch();
   };
 };
 
@@ -82,7 +102,12 @@ for (i of allCards) {
   i.addEventListener("click", flipCard,);
 };
 
-
+/*for (i of score) {
+  i.Nodelist
+    console.log('foo');
+  };
+};
+*/
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;

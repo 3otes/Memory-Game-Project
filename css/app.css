@@ -125,13 +125,13 @@ h1 {
   align-items: center;
   margin: 1em 0em 2em;
   position: absolute;
-  z-index: 9999;
+
 }
 
 /*
  * Styles for the you won reset button.
  */
-.green, .w3-hover-green:hover {
+.green {
     color: #fff!important;
     background-color: #4CAF50!important;
 }
