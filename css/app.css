@@ -17,8 +17,18 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: url('../img/bricks.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #7d97ad;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .container {
@@ -29,8 +39,28 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 46px;
+  margin: 0;
+}
+
+.header {
+    width: 660px;
+    background-color: rgb(28, 38, 47);
+    border-bottom: 5px solid #02b3e4;
+    border-bottom-style: ridge;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #2d3c49;
+    color: #02b3e4;
+    text-shadow: 2px 1px 1px black;
 }
 
 *time {
@@ -57,15 +87,19 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    /*
+    *background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    */
+    background-color: rgba(28, 38, 47, 0.7);
     padding: 32px;
-    border-radius: 10px;
+    /*
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 3em;
+    margin: 0 0 0;
 }
 
 .deck .card {
@@ -79,13 +113,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    box-shadow: 0px 0px 15px 1px #02b3e4;
 }
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #02b3e4;
+    background: #e49202c9;
     cursor: default;
+    box-shadow: 0px 0px 15px 1px #02b3e4;
 }
 
 .deck .card.show {
@@ -94,8 +129,9 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
+    background: #66e402bd;
     font-size: 33px;
+    box-shadow: 0px 0px 15px 1px #02b3e4;
 }
 
 /*
@@ -128,21 +164,24 @@ h1 {
 .hidden {
   display: none;
 }
-
+*woohoo {
+  display: flex;
+  align-items: flex-start;
+}
 
 
 .you-win {
   width: 660px;
-  min-height: 720px;
-  background: #2e3d49;
+  min-height: 350px;
+  background-color: #1c262f;
   padding: 32px;
   border-radius: 10px;
+  box-shadow: 0px 0px 15px 1px #02b3e4;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  margin: 1em 0em 2em;
   position: absolute;
-
+  margin: 1em 0em 2em;
+  z-index: 999;
 }
 
 /*
@@ -170,4 +209,15 @@ h1 {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
+}
+
+.footer {
+    width: 660px;
+    border-top: 5px solid #02b3e4;
+    margin-bottom: 10px;
+    background-color: #1c262f;
+    border-top-style: ridge;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
