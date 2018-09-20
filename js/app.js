@@ -8,7 +8,10 @@ let allCards = [...cards];
 let openCards = [];
 
 //to count card matches.
-let counter = 0;
+let matchCounter = 0;
+
+// counts all clicks.
+let clickCounter = 0;
 
 //count all moves
 let moveCounter = 0;
@@ -18,23 +21,38 @@ let seconds = 0;
 
 let minutes = 0;
 
+let secondsText = "";
+let minutesText = "";
 
 //gameTimer function
 function gameTimer() {
-  document.getElementById('timer').textContent = minutes + ':' + seconds;
-  seconds += 1;
-  if (seconds === 60) {
-      minutes++;
-      seconds = 0;
+  if (matchCounter != 1) {
+    if (seconds <= 9) {
+      secondsText = '0' + seconds;
+    } else {
+      secondsText = seconds;
+    };
+    if (minutes <= 9) {
+      minutesText = '0' + minutes;
+    } else {
+      minutesText = minutes;
+    };
+    document.getElementById('timer').textContent = minutesText + ':' + secondsText;
+    seconds += 1;
+    if (seconds === 60) {
+        minutes += 1;
+        seconds = 0;
+    };
+    if (minutes === 60) {
+        minutes = 0;
+    };
+    setTimeout(gameTimer, 1000);
   };
-  if (minutes === 60) {
-      minutes = 0;
-  };
-  setTimeout(gameTimer, 1000);
+
 };
 
 //game time
-gameTimer();
+//gameTimer();
 
 //shuffle allCards array.
 shuffle(allCards);
@@ -65,12 +83,13 @@ const checkMatch = function(){
     openCards[1].classList.add('match');
     //clear openCards counter to allow next move.
     openCards = [];
-    //counter to know that the game is over when all 8 matches are made, and display the pop up modal.
-    counter += 1;
-    if (counter === 1){
+    //matchCounter to know that the game is over when all 8 matches are made, and display the pop up modal.
+    matchCounter += 1;
+    if (matchCounter === 1){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
-      document.getElementById('time').textContent = "Your Time: " + minutes + ':' + seconds;
+      document.getElementById('time').textContent = "Your Time: " + minutesText + ':' + secondsText;
+
       document.getElementById('moves').textContent = "Moves: " + moveCounter;
       document.getElementById('stars').textContent = "Your Rating: " + document.getElementsByClassName('stars')[0].children.length;
     }
@@ -87,20 +106,23 @@ const checkMatch = function(){
 };
 
 function addToFlip(elem){
-  if (!elem.classList.contains('open')) {
+  if (!elem.classList.contains('open') && openCards.length < 2) {
     openCards.push(elem);
-  };
-
-  if (openCards.length === 1){
-    elem.classList.add('open', 'show');
-  } else if (openCards.length == 2) {
-    elem.classList.add('open', 'show');
-    checkMatch();
+    if (openCards.length === 1){
+      elem.classList.add('open', 'show');
+    } else if (openCards.length == 2) {
+      elem.classList.add('open', 'show');
+      checkMatch();
+    };
   };
 };
 
 //function to flip the cards in the for of loop.
 flipCard = function(e){
+  if (clickCounter === 0) {
+    gameTimer();
+  };
+  clickCounter += 1;
   if (e.target.classList.contains('fa')){
     addToFlip(e.target.parentElement);
   } else {
@@ -110,7 +132,7 @@ flipCard = function(e){
 
 //for of loop to flip the cards when clicked using the flipCard function
 for (i of allCards) {
-  i.addEventListener("click", flipCard,);
+  i.addEventListener("click", flipCard);
 };
 
 // Shuffle function from http://stackoverflow.com/a/2450976
