@@ -18,19 +18,16 @@ let seconds = 0;
 
 let minutes = 0;
 
-let hours = 0;
-
 
 //gameTimer function
 function gameTimer() {
-  document.getElementById('timer').textContent = hours + ':' + minutes + '.' + seconds;
+  document.getElementById('timer').textContent = minutes + ':' + seconds;
   seconds += 1;
   if (seconds === 60) {
       minutes++;
       seconds = 0;
   };
   if (minutes === 60) {
-      hour++;
       minutes = 0;
   };
   setTimeout(gameTimer, 1000);
@@ -54,11 +51,11 @@ for (i of allCards) {
 const checkMatch = function(){
   moveCounter += 1;
   document.getElementsByClassName('moves')[0].textContent = moveCounter;
-  if (moveCounter === 13){
+  if (moveCounter === 14){
     document.getElementsByClassName('stars')[0].children[0].remove();
-  } else if (moveCounter === 16) {
+  } else if (moveCounter === 18) {
     document.getElementsByClassName('stars')[0].children[0].remove();
-  } else if (moveCounter === 20) {
+  } else if (moveCounter === 22) {
     document.getElementsByClassName('stars')[0].children[0].remove();
   };
   //if matched...
@@ -70,30 +67,44 @@ const checkMatch = function(){
     openCards = [];
     //counter to know that the game is over when all 8 matches are made, and display the pop up modal.
     counter += 1;
-    if (counter === 8){
+    if (counter === 1){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
-      document.getElementById('time').textContent = "Your Time: " + hours + ':' + minutes + '.' + seconds;
+      document.getElementById('time').textContent = "Your Time: " + minutes + ':' + seconds;
+      document.getElementById('moves').textContent = "Moves: " + moveCounter;
       document.getElementById('stars').textContent = "Your Rating: " + document.getElementsByClassName('stars')[0].children.length;
     }
   // the cards do not match
   } else {
     setTimeout(function delayFlip() {
-      openCards[0].classList.remove('open', 'show');
-      openCards[1].classList.remove('open', 'show');
-      openCards = [];
+      if (openCards.length === 2) {
+        openCards[0].classList.remove('open', 'show');
+        openCards[1].classList.remove('open', 'show');
+        openCards = [];
+      };
     }, 1000);
+  };
+};
+
+function addToFlip(elem){
+  if (!elem.classList.contains('open')) {
+    openCards.push(elem);
+  };
+
+  if (openCards.length === 1){
+    elem.classList.add('open', 'show');
+  } else if (openCards.length == 2) {
+    elem.classList.add('open', 'show');
+    checkMatch();
   };
 };
 
 //function to flip the cards in the for of loop.
 flipCard = function(e){
-  openCards.push(e.target);
-  if (openCards.length === 1){
-    e.target.classList.add('open', 'show');
-  } else if (openCards.length == 2) {
-    e.target.classList.add('open', 'show');
-    checkMatch();
+  if (e.target.classList.contains('fa')){
+    addToFlip(e.target.parentElement);
+  } else {
+    addToFlip(e.target);
   };
 };
 
@@ -102,12 +113,6 @@ for (i of allCards) {
   i.addEventListener("click", flipCard,);
 };
 
-/*for (i of score) {
-  i.Nodelist
-    console.log('foo');
-  };
-};
-*/
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;

@@ -12,7 +12,7 @@
 
     <div class="container sand box">
         <header class="header">
-            <h1 class="projects-title">Matching Memory Mind Game</h1>
+            <h1 class="projects-title">Mind Games</h1>
             <section class="score-panel">
             	<ul class="stars">
             		<li><i class="fa fa-star"></i></li>
@@ -82,19 +82,23 @@
         </ul>
 
         <div class="hidden" id="woohoo">
-          <p class="win">
+          <h2 class="win">
             Congratulations you finished!
-          </p>
+          </h2>
+          <div id="moves">
+            0
+          </div>
           <div id="time">
             0
           </div>
           <div id="stars">
             0
           </div>
-          <button class="button block green" onclick="history.go(0)">Play again</button>
+          <button class="button green" onclick="history.go(0)">Play again</button>
         </div>
+
         <footer class="footer">
-          <h1>You can do it!</h1>
+          <h2>"You can do it!"</h2>
         </footer>
     </div>
 

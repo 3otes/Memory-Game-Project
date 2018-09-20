@@ -18,17 +18,16 @@ body {
 
 body {
     background: url('../img/bricks.png'); /* Background pattern from Subtle Patterns */
-    font-family: 'Coda', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 footer {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: #7d97ad;
+    color: #02b3e4;
+    text-shadow: 2px 1px 1px black;
     display: flex;
     justify-content: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 .container {
@@ -39,14 +38,21 @@ footer {
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 46px;
-  margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 46px;
+    margin: 10px 0 5px 0;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
 }
 
 .header {
     width: 660px;
+    margin: 50px 0 0 0;
     background-color: rgb(28, 38, 47);
     border-bottom: 5px solid #02b3e4;
     border-bottom-style: ridge;
@@ -62,23 +68,6 @@ h1 {
     color: #02b3e4;
     text-shadow: 2px 1px 1px black;
 }
-
-*time {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 1em 0em 2em;
-  position: absolute;
-}
-
-*stars {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 1em 0em 2em;
-  position: absolute;
-}
-
 
 /*
  * Styles for the deck of cards
@@ -139,9 +128,11 @@ h1 {
  */
 
 .score-panel {
+    font-size: 20px;
+    color: #02b3e4;
+    text-shadow: 2px 1px 1px black;
     text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
+    margin: 0 38px 38px 38px;
 }
 
 .score-panel .stars {
@@ -164,48 +155,59 @@ h1 {
 .hidden {
   display: none;
 }
-*woohoo {
-  display: flex;
-  align-items: flex-start;
+#woohoo {
+  top: 140px;
+}
+
+#stars {
+  margin: 0;
+  padding: 0;
+  margin: 10px 0 20px 0;
+}
+
+#time {
+  margin: 0;
+  padding: 0;
+  margin: 10px 0 20px 0;
+}
+
+#moves {
+  margin: 0;
+  padding: 0;
+  margin: 10px 0 20px 0;
 }
 
 
 .you-win {
-  width: 660px;
-  min-height: 350px;
+  width: 680px;
   background-color: #1c262f;
-  padding: 32px;
+  padding: 20px;
+  text-align: center;
+  color: #02b3e4;
+  text-shadow: 2px 1px 1px black;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 1px #02b3e4;
-  display: flex;
-  align-items: center;
   position: absolute;
-  margin: 1em 0em 2em;
-  z-index: 999;
 }
 
 /*
  * Styles for the you won reset button.
  */
 .green {
-    color: #fff!important;
-    background-color: #4CAF50!important;
+    color: #66e402bd;
+    background-color: #2e3d49;
 }
 
-.block {
-    display: block;
-    width: 100%;
-}
 
 .button {
-    border: none;
+    border-radius: 5px;
+    border-color: #66e402bd;
+    box-shadow: 0px 0px 15px 1px #66e402bd;
     display: inline-block;
     padding: 8px 16px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
-    background-color: inherit;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
@@ -213,6 +215,7 @@ h1 {
 
 .footer {
     width: 660px;
+    margin: 0 0 100px 0;
     border-top: 5px solid #02b3e4;
     margin-bottom: 10px;
     background-color: #1c262f;
