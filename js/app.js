@@ -26,7 +26,7 @@ let minutesText = "";
 
 //gameTimer function
 function gameTimer() {
-  if (matchCounter != 1) {
+  if (matchCounter != 8) {
     if (seconds <= 9) {
       secondsText = '0' + seconds;
     } else {
@@ -85,13 +85,19 @@ const checkMatch = function(){
     openCards = [];
     //matchCounter to know that the game is over when all 8 matches are made, and display the pop up modal.
     matchCounter += 1;
-    if (matchCounter === 1){
+    //the player won.
+    if (matchCounter === 8){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
       document.getElementById('time').textContent = "Your Time: " + minutesText + ':' + secondsText;
 
       document.getElementById('moves').textContent = "Moves: " + moveCounter;
-      document.getElementById('stars').textContent = "Your Rating: " + document.getElementsByClassName('stars')[0].children.length;
+      let modalStars = "";
+      for (i of document.querySelectorAll('i.fa-star')){
+        modalStars += '<i class="fa fa-star"></i>';
+      };
+      document.getElementById('stars').innerHTML = modalStars;
+      //document.getElementById('stars').textContent = "Your Rating: " + document.getElementsByClassName('stars')[0].children.length;
     }
   // the cards do not match
   } else {
