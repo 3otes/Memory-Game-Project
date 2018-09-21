@@ -68,8 +68,8 @@ const checkMatch = function(){
     document.getElementsByClassName('stars')[0].children[0].remove();
   } else if (moveCounter === 18) {
     document.getElementsByClassName('stars')[0].children[0].remove();
-  } else if (moveCounter === 22) {
-    document.getElementsByClassName('stars')[0].children[0].remove();
+  //} else if (moveCounter === 22) {
+    //document.getElementsByClassName('stars')[0].children[0].remove();
   };
   //if matched...
   if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className){
