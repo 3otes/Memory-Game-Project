@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background: url('../img/bricks.png'); /* Background pattern from Subtle Patterns */
+    background: url('../img/bricks.png');
     font-family: 'Roboto', sans-serif;
 }
 
@@ -195,7 +195,6 @@ h2 {
     color: #66e402bd;
     background-color: #2e3d49;
 }
-
 
 .button {
     border-radius: 5px;

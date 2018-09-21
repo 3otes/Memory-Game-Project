@@ -18,7 +18,6 @@ let moveCounter = 0;
 
 //increments of time.
 let seconds = 0;
-
 let minutes = 0;
 
 let secondsText = "";
@@ -48,11 +47,7 @@ function gameTimer() {
     };
     setTimeout(gameTimer, 1000);
   };
-
 };
-
-//game time
-//gameTimer();
 
 //shuffle allCards array.
 shuffle(allCards);
@@ -90,7 +85,6 @@ const checkMatch = function(){
       document.getElementById('woohoo').classList.remove('hidden');
       document.getElementById('woohoo').classList.add('you-win');
       document.getElementById('time').textContent = "Your Time: " + minutesText + ':' + secondsText;
-
       document.getElementById('moves').textContent = "Moves: " + moveCounter;
       let modalStars = "";
       for (i of document.querySelectorAll('i.fa-star')){
@@ -111,6 +105,8 @@ const checkMatch = function(){
   };
 };
 
+// function to prevent more than two cards being flipped or the same card being
+// clicked twice.
 function addToFlip(elem){
   if (!elem.classList.contains('open') && openCards.length < 2) {
     openCards.push(elem);
@@ -144,7 +140,6 @@ for (i of allCards) {
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
