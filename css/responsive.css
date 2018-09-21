@@ -1,0 +1,85 @@
+@media screen and (min-width:260px) and (max-width: 479px) {
+    .header {
+        width: 315px;
+        margin: 5px 5px 0 5px;
+    }
+    .projects-title {
+        padding: 5px;
+        margin: 5px 0px 5px 0px;
+        font-size: 46px;
+    }
+    .score-panel {
+        font-size: 20px;
+        margin: 0 10px 10px 10px;
+
+    }
+    .responsive-p {
+        display: block;
+        margin: 0px 0px 3px 0;
+    }
+    .deck {
+        width: 315px;
+        min-height: 335px;
+        padding: 3px;
+    }
+    .deck .card {
+        height: 65px;
+        width: 65px;
+        font-size: 0;
+        margin: 6px;
+    }
+    .footer {
+        width: 315px;
+        margin-bottom: 0;
+    }
+    .you-win {
+        width: 315px;
+        padding: 20px;
+    }
+    .win {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 664px) {
+    .header {
+        width: 480px;
+        margin: 5px 5px 0 5px;
+    }
+    .projects-title {
+        padding: 5px;
+        margin: 5px 0px 5px 0px;
+        font-size: 46px;
+    }
+    .score-panel {
+        font-size: 20px;
+        margin: 0 10px 10px 10px;
+
+    }
+    .responsive-p {
+        display: block;
+        margin: 0px 0px 3px 0;
+    }
+    .deck {
+        width: 480px;
+        min-height: 335px;
+        padding: 3px;
+    }
+    .deck .card {
+        height: 100px;
+        width: 100px;
+        font-size: 0;
+        margin: 6px;
+    }
+    .footer {
+        width: 480px;
+        margin-bottom: 0;
+    }
+    .you-win {
+        width: 480px;
+        padding: 20px;
+    }
+    .win {
+        margin: 0;
+    }
+}
