@@ -62,7 +62,7 @@ When a user wins the game, a modal appears to congratulate the player and ask if
 **PLEASE DO NOT CONTRIBUTE TO THIS PROJECT AS IT IS A COMPLETED TEST**
 
 
-##CodeExplained
+## CodeExplained
 
 So to understand the code let's start with the files that make up this game.
 
@@ -70,7 +70,7 @@ HTML
 CSS
 JavaScript
 
-##HTML
+## HTML
 HTML Code is the file that links everything together. If you only run the HTML without the other code it will look like a document that makes no sense, just a list of characters and words. To see this, download the index.html file and using “Ctrt and O” shortcut in your browser open it.
 
 In between the ``` <head> ... </head>``` tags you will see the links to the CSS and other resources that define the style the page. Below is the actual code from this completed project.
@@ -88,11 +88,11 @@ In between the ``` <head> ... </head>``` tags you will see the links to the CSS 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700" rel="stylesheet">
 </head>
 ```
-##CSS
+## CSS
 
 CSS is the static style for the game. This includes everything from the background to the layout of the objects in the game. Here is where it can seem confusing, as there is more than one CSS stylesheet. I am using ``` <link rel="stylesheet" href="css/app.css"> ``` to style the game, and ``` <link rel="stylesheet" href="css/responsive.css"> ``` to make two breakpoints to make the game look good on different screen sizes.
 
-##JavaScript
+## JavaScript
 
 JavaScript is where things start to get interesting. So in the CSS there are multiple styles for each object. Take for example the the cards. When you click on a card it appears to flip. This is because the JavaScript is switching between the different styles based on your click. If you click on one card, the background color of the card changes to “Amber” and a font awesome character is displayed.
 
@@ -105,11 +105,11 @@ The amount of moves you make are being counted by a JavaScript function, which f
 Lastly, you may wonder why you did not see the JavaScript ``` <script src="js/app.js"></script> ``` in the head of the HTML like the CSS. This is because it is not a good idea to run JavaScript functions until the whole page is finished loading all its content. So you will find the link to the JavaScript in the bottom of the HTML file. ``` <script src="js/app.js"></script> ```
 
 
-##PlayGame
+## PlayGame
 
 [HERE](http://www.encoreservices.co.za/udacity/memoryGameProject/index.html) is a link to the game hosted by Encore Services, have fun and please let me know if you encounter any bugs.
 
-##Bugs
+## Bugs
 
 * This is the part where you can help, I do not know why the game does not work at all on my i Pad 1, except for the reset button?
 * There is some incorrect style color on the end game modal using Samsung phone and tablets using Chrome?
