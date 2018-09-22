@@ -64,14 +64,15 @@ When a user wins the game, a modal appears to congratulate the player and ask if
 
 **PLEASE DO NOT CONTRIBUTE TO THIS PROJECT AS IT IS A COMPLETED TEST**
 
+* [Table of Contents](#table-of-contents)
 
 ## Code-explained
 
 So to understand the code let's start with the files that make up this game.
 
-### - HTML
-### - CSS
-### - JavaScript
+* HTML
+* CSS
+* JavaScript
 
 * [Table of Contents](#table-of-contents)
 
