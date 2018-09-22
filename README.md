@@ -5,11 +5,11 @@
 * [Introduction](#Introduction)
 * [Rubric](#Rubric)
 * [Contributing](#contributing)
-* [Code explained](#Code explained)
+* [CodeExplained](#Code explained)
 * [HTML](#HTML)
 * [CSS](#CSS)
 * [JavaScript](#JavaScript)
-* [Play Game](#Play Game)
+* [PlayGame](#Play Game)
 * [Bugs](#Bugs)
 
 ## Introduction
@@ -62,7 +62,7 @@ When a user wins the game, a modal appears to congratulate the player and ask if
 **PLEASE DO NOT CONTRIBUTE TO THIS PROJECT AS IT IS A COMPLETED TEST**
 
 
-##Code explained
+##CodeExplained
 
 So to understand the code let's start with the files that make up this game.
 
@@ -105,11 +105,11 @@ The amount of moves you make are being counted by a JavaScript function, which f
 Lastly, you may wonder why you did not see the JavaScript ``` <script src="js/app.js"></script> ``` in the head of the HTML like the CSS. This is because it is not a good idea to run JavaScript functions until the whole page is finished loading all its content. So you will find the link to the JavaScript in the bottom of the HTML file. ``` <script src="js/app.js"></script> ```
 
 
-##Play Game
+##PlayGame
 
-Here is a link to the game hosted by Encore Services, have fun and please let me know if you encounter any bugs.
+[HERE](http://www.encoreservices.co.za/udacity/memoryGameProject/index.html) is a link to the game hosted by Encore Services, have fun and please let me know if you encounter any bugs.
 
 ##Bugs
 
-* This is the part where you can help, I do not know why the game does not work at all on my i Pad 1, except for the reset button? 
+* This is the part where you can help, I do not know why the game does not work at all on my i Pad 1, except for the reset button?
 * There is some incorrect style color on the end game modal using Samsung phone and tablets using Chrome?
