@@ -8,7 +8,7 @@
 * [Code-explained](#code-explained)
 * [HTML](#html)
 * [CSS](#css)
-* [Java-Script](#javaScript)
+* [Java-Script](#java-script)
 * [Play-game](#play-game)
 * [Bugs](#bugs)
 
@@ -69,9 +69,9 @@ When a user wins the game, a modal appears to congratulate the player and ask if
 
 So to understand the code let's start with the files that make up this game.
 
-HTML
-CSS
-JavaScript
+### - HTML
+### - CSS
+### - JavaScript
 
 * [Table of Contents](#table-of-contents)
 
@@ -101,7 +101,7 @@ CSS is the static style for the game. This includes everything from the backgrou
 
 * [Table of Contents](#table-of-contents)
 
-## JavaScript
+## Java-Script
 
 JavaScript is where things start to get interesting. So in the CSS there are multiple styles for each object. Take for example the the cards. When you click on a card it appears to flip. This is because the JavaScript is switching between the different styles based on your click. If you click on one card, the background color of the card changes to “Amber” and a font awesome character is displayed.
 
