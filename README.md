@@ -5,11 +5,11 @@
 * [Introduction](#Introduction)
 * [Rubric](#Rubric)
 * [Contributing](#contributing)
-* [CodeExplained](#Code explained)
+* [Code-explained](#Code-explained)
 * [HTML](#HTML)
 * [CSS](#CSS)
 * [JavaScript](#JavaScript)
-* [PlayGame](#Play Game)
+* [Play-game](#Play-game)
 * [Bugs](#Bugs)
 
 ## Introduction
@@ -62,7 +62,7 @@ When a user wins the game, a modal appears to congratulate the player and ask if
 **PLEASE DO NOT CONTRIBUTE TO THIS PROJECT AS IT IS A COMPLETED TEST**
 
 
-## CodeExplained
+## Code-explained
 
 So to understand the code let's start with the files that make up this game.
 
@@ -105,7 +105,7 @@ The amount of moves you make are being counted by a JavaScript function, which f
 Lastly, you may wonder why you did not see the JavaScript ``` <script src="js/app.js"></script> ``` in the head of the HTML like the CSS. This is because it is not a good idea to run JavaScript functions until the whole page is finished loading all its content. So you will find the link to the JavaScript in the bottom of the HTML file. ``` <script src="js/app.js"></script> ```
 
 
-## PlayGame
+## Play-game
 
 [HERE](http://www.encoreservices.co.za/udacity/memoryGameProject/index.html) is a link to the game hosted by Encore Services, have fun and please let me know if you encounter any bugs.
 
