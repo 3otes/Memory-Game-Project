@@ -2,15 +2,15 @@
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Rubric](#Rubric)
+* [Introduction](#introduction)
+* [Rubric](#rubric)
 * [Contributing](#contributing)
-* [Code-explained](#Code-explained)
-* [HTML](#HTML)
-* [CSS](#CSS)
-* [JavaScript](#JavaScript)
-* [Play-game](#Play-game)
-* [Bugs](#Bugs)
+* [Code-explained](#code-explained)
+* [HTML](#html)
+* [CSS](#css)
+* [JavaScript](#java-script)
+* [Play-game](#play-game)
+* [Bugs](#bugs)
 
 ## Introduction
 
