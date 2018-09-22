@@ -19,7 +19,7 @@ The starter project had some HTML and CSS styling to display a static version of
 To get started, I had to open `js/app.js` and build out the app's functionality
 Following specific, detailed instructions, found in the Udacity Memory Game project rubric.
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## Rubric
 
@@ -58,13 +58,13 @@ The game randomly shuffles the cards. A user wins once all cards have successful
 #### - Congratulations Popup
 When a user wins the game, a modal appears to congratulate the player and ask if they want to play again. It should also tell the user how much time it took to win the game, and what the star rating was.
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## Contributing
 
 **PLEASE DO NOT CONTRIBUTE TO THIS PROJECT AS IT IS A COMPLETED TEST**
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## Code-explained
 
@@ -74,7 +74,7 @@ So to understand the code let's start with the files that make up this game.
 * CSS
 * JavaScript
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## HTML
 HTML Code is the file that links everything together. If you only run the HTML without the other code it will look like a document that makes no sense, just a list of characters and words. To see this, download the index.html file and using “Ctrt and O” shortcut in your browser open it.
@@ -94,13 +94,13 @@ In between the ``` <head> ... </head>``` tags you will see the links to the CSS 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700" rel="stylesheet">
 </head>
 ```
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## CSS
 
 CSS is the static style for the game. This includes everything from the background to the layout of the objects in the game. Here is where it can seem confusing, as there is more than one CSS stylesheet. I am using ``` <link rel="stylesheet" href="css/app.css"> ``` to style the game, and ``` <link rel="stylesheet" href="css/responsive.css"> ``` to make two breakpoints to make the game look good on different screen sizes.
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## Java-Script
 
@@ -114,7 +114,7 @@ The amount of moves you make are being counted by a JavaScript function, which f
 
 Lastly, you may wonder why you did not see the JavaScript ``` <script src="js/app.js"></script> ``` in the head of the HTML like the CSS. This is because it is not a good idea to run JavaScript functions until the whole page is finished loading all its content. So you will find the link to the JavaScript in the bottom of the HTML file. ``` <script src="js/app.js"></script> ```
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## Play-game
 
@@ -125,4 +125,4 @@ Lastly, you may wonder why you did not see the JavaScript ``` <script src="js/ap
 * This is the part where you can help, I do not know why the game does not work at all on my i Pad 1, except for the reset button?
 * There is some incorrect style color on the end game modal using Samsung phone and tablets using Chrome?
 
-* [Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
